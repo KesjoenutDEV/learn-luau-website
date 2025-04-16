@@ -20,10 +20,11 @@ const translations = {
   }
 };
 
+// Huidige taal
 let currentLang = 'nl';
 
-document.getElementById("lang-toggle").addEventListener("click", () => {
-  currentLang = currentLang === 'nl' ? 'en' : 'nl';
+// Update de inhoud van de website
+function updateLanguage() {
   const t = translations[currentLang];
   document.getElementById("intro-text").textContent = t.intro;
   document.getElementById("download-title").textContent = t.downloadTitle;
@@ -32,4 +33,14 @@ document.getElementById("lang-toggle").addEventListener("click", () => {
   document.getElementById("what-text").textContent = t.whatText;
   document.getElementById("footer-text").textContent = t.footer;
   document.getElementById("lang-toggle").textContent = t.toggle;
+}
+
+// Event listener voor de taalwisselknop
+document.getElementById("lang-toggle").addEventListener("click", () => {
+  // Wissel de taal
+  currentLang = currentLang === 'nl' ? 'en' : 'nl';
+  updateLanguage();
 });
+
+// Initialiseer de pagina met de huidige taal
+updateLanguage();
