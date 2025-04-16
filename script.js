@@ -1,35 +1,90 @@
-// Vertalingen
-const translations = {
-  nl: {
-    intro: "Leer gratis LuaU en bouw je eigen Roblox-games!",
-    downloadTitle: "Download de App",
-    downloadBtn: "Download voor Windows",
-    whatTitle: "Wat is LuaU?",
-    whatText: "LuaU is de scripttaal voor Roblox Studio. Met LuaU kun je interactieve games bouwen. Onze app leert je alles!",
-    footer: "© 2025 Learn-LuaU. Gemaakt voor beginnende ontwikkelaars.",
-    toggle: "Switch to English"
-  },
-  en: {
-    intro: "Learn LuaU for free and build your own Roblox games!",
-    downloadTitle: "Download the App",
-    downloadBtn: "Download for Windows",
-    whatTitle: "What is LuaU?",
-    whatText: "LuaU is the scripting language for Roblox Studio. With LuaU, you can build interactive games. Our app teaches you everything!",
-    footer: "© 2025 Learn-LuaU. Made for beginner developers.",
-    toggle: "Wissel naar Nederlands"
-  }
-};
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-let currentLang = 'nl';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-document.getElementById("lang-toggle").addEventListener("click", () => {
-  currentLang = currentLang === 'nl' ? 'en' : 'nl';
-  const t = translations[currentLang];
-  document.getElementById("intro-text").textContent = t.intro;
-  document.getElementById("download-title").textContent = t.downloadTitle;
-  document.getElementById("download-btn").textContent = t.downloadBtn;
-  document.getElementById("what-title").textContent = t.whatTitle;
-  document.getElementById("what-text").textContent = t.whatText;
-  document.getElementById("footer-text").textContent = t.footer;
-  document.getElementById("lang-toggle").textContent = t.toggle;
-});
+body {
+  background-color: #111827;
+  color: #f9fafb;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1f2937;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.brand {
+  font-size: 26px;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+header p {
+  color: #d1d5db;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+#lang-toggle {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #374151;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.download {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.download h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.download-btn {
+  padding: 14px 28px;
+  background-color: #22c55e;
+  color: #111827;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #16a34a;
+}
+
+.info h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 16px;
+  color: #e5e7eb;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f2937;
+  color: #9ca3af;
+}
